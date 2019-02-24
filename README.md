@@ -8,5 +8,8 @@ How is this app useful?
 This is the first 'full-stack' application which incorporates REST (REpresentational State Transfer), an important aspect of contemporary web applications. 
 
 
+Challenges:
+Keeping straight about which files are what portion of the MVC design and when it was loading was hard. The debugger functionality in VSCode was a great tool to figure out what each variable held and revealing each of the steps.
+
 Future directions: 
 I think it would be visually appealing to have an image of a burger that closely resembles the description show up instead of just the description. I wonder if it'll be possible to get a google image of a real "cheeseburger" to be inserted in the left side. 
