@@ -1,5 +1,23 @@
+body {
+    background-color: sandybrown;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
 h1 {
     color : red;
 }
 
 
+.burger-container {
+    background-color: white;
+}
+
+.devoured-container {
+    background-color: lightgray;
+    color: gray;
+    border-color: gray !important;
+}

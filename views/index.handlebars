@@ -1,48 +1,65 @@
-<div class="row text-center">
+<!-- Header with burger image and title-->
+<div class="row mb-3">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 text-center">
     <img src="../assets/img/burger.png" alt="burger">
     <h1>Eat-Da-Burger!</h1>
+  </div>
+  <div class="col-md-3"></div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <ul>
-      {{#each burgers}}
-      {{#unless devoured}}
-      <li>
+<!-- Burgers listed (not devoured on left half, devoured on right half) -->
+<div class="row mb-3">
+  <div class="col-md-1"></div>
+
+  <!-- Not devoured (left half) -->
+  <div class="col-md-5 text-center">
+    {{#each burgers}}
+    {{#unless devoured}}
+    <div class="row mb-1 mp-1">
+      <div class="col-md-7 text-center burger-container">
+        {{id}}.
         {{burger_name}}
-        <button class="devour_burger" data-id="{{this.id}}">Devour It!</button>
-      </li>
-      {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="col-md-6">
-    <ul>
-      {{#each burgers}}
-      {{#if devoured}}
-      <li>
-        {{burger_name}}
-      </li>
-      {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-
-</div>
-
-
-<div class="row">
-  <div class="text-center">
-    <form class="create-form">
-
-      <div class="form-group">
-        <textarea class="form-control" rows="3" id="burgerDescription">
-        </textarea>
       </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <p>Enter a burger you want to eat and click the "Submit" button</p>
-    </form>
+      <div class="col-md-5">
+        <button class="devour_burger" data-id="{{this.id}}">Devour It!</button>
+      </div>
+    </div>
+    {{/unless}}
+    {{/each}}
   </div>
+
+  <!-- Devoured (right half) -->
+  <div class="col-md-4">
+    {{#each burgers}}
+    {{#if devoured}}
+    <div class="row mp-1">
+      <div class="col-md-12 border devoured-container">
+        {{id}}.
+        {{burger_name}}
+      </div>
+    </div>
+    {{/if}}
+    {{/each}}
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+
+<!-- Form entry -->
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="text-center">
+      <form class="create-form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" id="burgerDescription">
+        </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+        <p>Enter a burger you want to eat and click the "Submit" button</p>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
 </div>
