@@ -2,7 +2,7 @@
 var mysql = require("mysql");
 
 //stored password in separate env file so need dotenv
-// require("dotenv").config();
+require("dotenv").config();
 
 var connection = mysql.createConnection({
     host: "localhost",
