@@ -2,19 +2,16 @@
 var mysql = require("mysql");
 
 //stored password in separate env file so need dotenv if running locally but this is for heroku so need to remove
-
-const aws = require('aws-sdk');
-
-let s3 = new aws.S3({
-    accessKeyId: process.env.DB_PASS
-});
+if (process.env.NODE_ENV !== 'production') {
+    require("dotenv").config();
+}
 
 // create connection variable
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: s3.accessKeyId,
+    password: process.env.DB_PASS,
     database: "burgers_db"
 });
 
