@@ -3,7 +3,6 @@ Uses MySQL, Node, Express and Handlebars
 
 ![Alt text](public/assets/img/eatdaburger.JPG?raw=true "EatDaBurger")
 
-This app only works locally.
 I was unable to host on heroku. The instructions (Heroku Deployment Process
 For MySQL Projects) are for Mac version MySQL Workbench so I walked through it but never figured it out.
 
